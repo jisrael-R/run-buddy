@@ -15,4 +15,4 @@ https://lernantino.github.io/run-buddy/
 Made with ❤️ by [Jorman Israel]
 
 ### ©️2019 Run Buddy, Inc 
-yayya
+
