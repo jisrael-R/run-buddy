@@ -35,12 +35,6 @@ header{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-<<<<<<< HEAD
-=======
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
->>>>>>> feature/aesthetic
     z-index: 9999;
 }
 header nav{
