@@ -18,6 +18,7 @@ header h1{
     font-size: 36px;
     color: #fce138;
     margin: 0;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a{
@@ -25,11 +26,21 @@ header a{
     color: #fce138;
 }
 header{
+    background-image: url("../images/flipped-hero-image.jpeg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
     padding: 20px 35px;
-    background: #39a6b2;
+    
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+<<<<<<< HEAD
+=======
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+>>>>>>> feature/aesthetic
     z-index: 9999;
 }
 header nav{
@@ -46,6 +57,13 @@ header nav ul li a {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header nav ul li a:hover{
+  background: #fce138;
+  color: #024e76;
+  border-radius: 15px;
+  text-shadow: none;
 }
 /* HEADER STYLE END */
 
@@ -77,8 +95,9 @@ section {
 /* HERO STYLES START */
 .hero{
     background-image: url("../images/flipped-hero-image.jpeg");
+    background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -91,6 +110,7 @@ section {
     color: #fff;
     font-size: 18px;
     line-height: 1.2;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .hero-cta h2{
     font-style: italic;
@@ -98,13 +118,14 @@ section {
     color: #fce138;
 }
 .hero-form{
-    background-color: #fce138;
+    background-color: rgba(252, 226, 56, 0.808);
     padding: 20px;
     color: #024e76;
     border: solid 3px #024e76;
     width: 40%;
     margin: 3.5%;
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
 }
 .hero-form p {
     margin: 5px 0 15px 0;
@@ -121,6 +142,12 @@ section {
     color: #024e76;
     width: 100%;
     margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+.form-input:focus{
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
 }
 .hero-form label{
  margin: 0 5px;
@@ -191,9 +218,73 @@ section {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .hero-form button:hover{
     background: #39a6b2;
+}
+.checkbox-wrapper input, .radio-wrapper input {
+  opacity: 0;
+}
+.checkbox-wrapper label, .radio-wrapper label {
+  position: relative;
+  left: 10px;
+  margin: 10px;
+  line-height: 1.6;
+}
+.checkbox-wrapper label::before, .radio-wrapper label::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: rgba(255, 255, 255, 0.75);  
+  border: 1px solid #024e76;  
+  position: absolute;
+  top: -4px;
+  left: -30px;
+}
+.radio-wrapper label::before {
+  border-radius: 50%;
+}
+.radio-wrapper label::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #024e76;
+  position: absolute;
+  left: -29px;
+  top: -3px;
+}
+
+.checkbox-wrapper label::after {
+  content: "";
+  height: 6px;
+  width: 14px;
+  border-left: 2px solid #024e76;
+  border-bottom: 2px solid #024e76;
+  position: absolute;
+  left: -26px;
+  top: 1px;
+}
+.checkbox-wrapper label::after{
+  transform: rotate(-58deg);
+}
+.radio-wrapper label::after{
+  background-image: radial-gradient(circle, #39a6b2, #024e76);
+
+}
+.checkbox-wrapper input:checked + label,
+.radio-wrapper input:checked + label {
+  font-weight: bold;
+}
+.checkbox-wrapper input + label::after, 
+.radio-wrapper input + label::after {
+  content: none;
+}
+
+.checkbox-wrapper input:checked + label::after, 
+.radio-wrapper input:checked + label::after {
+  content: "";
 }
 /* HERO STYLES ENDS */
 
@@ -258,6 +349,16 @@ section {
     font-size: 26px;
     line-height: 1.5;
     color: #024e76;
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+.step:last-child {
+  border-bottom: 1px solid #39a6b2;
+}
+.step:nth-child(even) {
+  border-bottom: 1px solid #39a6b2;
 }
 
 .section-title {
@@ -376,6 +477,13 @@ section {
       width: 100%;
       margin-top: 5px;
       margin-bottom: 15px;
+      border-radius: 10px;
+      background-color: rgba(255,255,255, 0.75);
+      
+  }
+  .contact-form input:focus, .contact-form textarea:focus{
+    background-color: rgba(255,255,255, 1);
+    outline: none;
   }
   .contact-form button{
       width: 100%;
@@ -385,6 +493,11 @@ section {
       font-size: 16px;
       background: #fce138;
       cursor: pointer;
+      border-radius: 10px;
+  }
+  .contact-form button:hover{
+    color: #fce138;
+    background: #39a6b2;
   }
   
   
@@ -407,6 +520,7 @@ section {
     header {
         padding-bottom: 0;
         justify-content: center;
+        position: relative;
       }
     
       header h1 {
